@@ -1,27 +1,13 @@
 package com.alibaba.domain;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.context.annotation.Bean;
 
-
+@Getter
+@Setter
 public class User {
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public User() {
-    }
 
     /**
      * 姓名
@@ -32,4 +18,9 @@ public class User {
      * 年龄
      */
     private String age;
+
+    public User(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
 }

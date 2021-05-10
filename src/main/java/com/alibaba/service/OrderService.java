@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OrderService {
-    @Autowired
+    @Autowired(required = false)
     private OrderDao orderDao;
 
     public User OrderDetailById(int id) {
-
-        return orderDao.findById(id);
+        if(id != 0){
+            return orderDao.findById(id);
+        }
+        return new User("查询","失败");
     }
 }
