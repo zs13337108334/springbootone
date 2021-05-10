@@ -1,12 +1,14 @@
 package com.alibaba.dao;
 
+import com.alibaba.domain.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
+@Mapper
+public interface OrderDao {
 
-@Component
-public class OrderDao {
-    public String OrderDetailById(){
-        return "订单详情";
-    }
+    @Select("select * from cpy where id = #{id}")
+    public User findById(int id);
+
 }
+

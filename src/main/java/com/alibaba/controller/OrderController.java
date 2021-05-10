@@ -1,6 +1,7 @@
 package com.alibaba.controller;
 
 
+import com.alibaba.domain.User;
 import com.alibaba.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +14,8 @@ public class OrderController {
     private OrderService orderService;
 
     @RequestMapping("/handler")
-    public String orderController() {
-        return orderService.OrderDetailById();
+    public User orderController() {
+        return orderService.OrderDetailById(1);
     }
 
 
