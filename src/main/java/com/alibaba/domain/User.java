@@ -12,12 +12,12 @@ public class User {
         this.name = name;
     }
 
-    public String getAgr() {
-        return agr;
+    public String getAge() {
+        return age;
     }
 
-    public void setAgr(String agr) {
-        this.agr = agr;
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public User() {
@@ -31,5 +31,5 @@ public class User {
     /**
      * 年龄
      */
-    private String agr;
+    private String age;
 }
