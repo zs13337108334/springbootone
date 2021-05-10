@@ -23,7 +23,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- lombok依赖。不设置版本，由<paren>统一管理版本d -->
+        <!-- lombok依赖。不设置版本，由<paren>统一管理版本ds -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
