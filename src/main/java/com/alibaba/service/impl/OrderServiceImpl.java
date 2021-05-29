@@ -15,7 +15,7 @@ public class OrderServiceImpl implements OrderService {
 
     private final Log log = LogFactory.getLog(OrderService.class);
 
-    @Autowired(required = false)
+    @Autowired
     private OrderDao orderDao;
 
     @Override
@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<User> selectAll(Integer pageNum,Integer countNum) {
+    public List<User> selectAll(Integer pageNum, Integer countNum) {
 
         //1.校验
         if (pageNum == 0 || pageNum == 1) {
@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         //2.查询
-        return orderDao.selectAll(pageNum -1, countNum);
+        return orderDao.selectAll(pageNum - 1, countNum);
     }
 
 

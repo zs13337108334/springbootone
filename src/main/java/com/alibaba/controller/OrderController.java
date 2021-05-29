@@ -26,8 +26,8 @@ public class OrderController {
     }
 
     @RequestMapping("/selectAll")
-    public List<User> selectAll(Integer pageNum,Integer countNum) {
-        return orderService.selectAll(3,5);
+    public List<User> selectAll(Integer pageNum, Integer countNum) {
+        return orderService.selectAll(3, 5);
     }
 
 }
