@@ -1,25 +1,25 @@
 package com.alibaba.service;
 
-import com.alibaba.dao.OrderDao;
 import com.alibaba.domain.User;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class OrderService {
-    private final Log log = LogFactory.getLog(OrderService.class);
+public interface OrderService {
 
-    @Autowired(required = false)
-    private OrderDao orderDao;
+    /**
+     *
+     * @param id
+     * @return id对应的用户
+     */
+    public User OrderDetailById(int id);
 
-    public User OrderDetailById(int id) {
-        if (id != 0) {
-            log.info("OrderDetailById param={} 查询成功");
-            return orderDao.findById(id);
-        }
-        log.error("OrderDetailById param={} 查询失败！");
-        return new User("查询", "失败");
-    }
+    /** 分页查询
+     *
+     * @param pageNum      第几页
+     * @param countNum     每页显示多少条
+     * @return              结果列表
+     */
+    List<User> selectAll(Integer pageNum,Integer countNum);
 }

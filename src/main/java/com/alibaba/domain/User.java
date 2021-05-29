@@ -7,6 +7,9 @@ import lombok.Setter;
 @Setter
 public class User {
 
+    public User() {
+    }
+
     /**
      * 姓名
      */
@@ -15,10 +18,11 @@ public class User {
     /**
      * 年龄
      */
-    private String age;
+    private Integer age;
 
-    public User(String name, String age) {
-        this.name = name;
-        this.age = age;
-    }
+    /**
+     * 部门
+     */
+    private String dept;
+
 }

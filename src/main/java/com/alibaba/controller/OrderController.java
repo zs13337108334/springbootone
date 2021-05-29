@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author: zhangshuai
  * @date: 2021-05-11
@@ -20,8 +22,12 @@ public class OrderController {
 
     @RequestMapping("/handler")
     public User orderController() {
-        return orderService.OrderDetailById(0);
+        return orderService.OrderDetailById(1);
     }
 
+    @RequestMapping("/selectAll")
+    public List<User> selectAll(Integer pageNum,Integer countNum) {
+        return orderService.selectAll(3,5);
+    }
 
 }
