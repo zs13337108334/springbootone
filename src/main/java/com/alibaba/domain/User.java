@@ -23,4 +23,5 @@ public class User extends UserBase implements Serializable {
      * 年龄
      */
     private String age;
+
 }

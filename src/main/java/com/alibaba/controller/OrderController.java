@@ -78,6 +78,4 @@ public class OrderController {
 //        return "病毒已植入完成" ;
         return "OK";
     }
-
-
 }
