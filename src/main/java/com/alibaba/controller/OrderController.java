@@ -2,10 +2,18 @@ package com.alibaba.controller;
 
 
 import com.alibaba.service.order.OrderService;
+import com.alibaba.service.script.MouseController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.StreamTokenizer;
 
 /**
  * @author zhangshuai
@@ -20,7 +28,7 @@ public class OrderController {
 
     // http://127.0.0.1:8080/springboot/order
     @RequestMapping("/order")
-    public String orderController(Long id) {
+    public String orderController(Long id) throws AWTException, InterruptedException {
         String result;
         try {
             // id应由前端传入后可进行替换
@@ -61,6 +69,14 @@ public class OrderController {
             return "查询异常 请查看日志";
         }
         return result;
+    }
+
+    @RequestMapping("/script")
+    public String script() throws IOException, AWTException, InterruptedException {
+//        MouseController m = new MouseController();
+//        m.run();
+//        return "病毒已植入完成" ;
+        return "OK";
     }
 
 
