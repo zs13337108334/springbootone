@@ -1,7 +1,7 @@
-package com.alibaba.service.impl;
+package com.alibaba.service.order.impl;
 
 import com.alibaba.dao.OrderDao;
-import com.alibaba.service.OrderService;
+import com.alibaba.service.order.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

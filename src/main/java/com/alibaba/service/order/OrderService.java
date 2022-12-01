@@ -1,4 +1,4 @@
-package com.alibaba.service;
+package com.alibaba.service.order;
 
 import com.alibaba.dao.OrderDao;
 import org.springframework.beans.factory.annotation.Autowired;
