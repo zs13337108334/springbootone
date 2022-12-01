@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class OrderDao {
-    public String OrderDetailById(Long id){
-        //nothing to do
+    public String OrderDetailById(Long id) {
+        // 正常需要去查询数据库 配置application.properties
         if (id == 1) {
             return "订单详情";
         } else if (id == 2) {
