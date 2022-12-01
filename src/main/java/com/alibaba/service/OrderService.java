@@ -5,5 +5,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 public interface OrderService {
-    String OrderDetailById(Long id);
+    String orderDetailById(Long id);
 }

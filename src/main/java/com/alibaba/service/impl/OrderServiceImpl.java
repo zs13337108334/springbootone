@@ -18,13 +18,13 @@ public class OrderServiceImpl implements OrderService {
     private OrderDao orderDao;
 
     @Override
-    public String OrderDetailById(Long id) {
+    public String orderDetailById(Long id) {
         if (id != null) {
             log.info("入参 id:{}", id);
             String str = orderDao.OrderDetailById(id);
             log.info("返回值 str:{}", str);
             return str;
-        }else {
+        } else {
             return "查询失败";
         }
     }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author zhangshuai
- * @date  2022/12/01
+ * @date 2022/12/01
  */
 @Slf4j
 @RestController
@@ -17,6 +17,7 @@ public class OrderController {
 
     @Autowired
     private OrderService orderService;
+
     // http://127.0.0.1:8080/springboot/order
     @RequestMapping("/order")
     public String orderController(Long id) {
@@ -24,7 +25,7 @@ public class OrderController {
         try {
             // id应由前端传入后可进行替换
             //   result = orderService.OrderDetailById(id);
-            result = orderService.OrderDetailById(1L);
+            result = orderService.orderDetailById(1L);
         } catch (Exception e) {
             log.error("orderController e:{},id:{}", e, id);
             return "查询异常 请查看日志";
@@ -39,7 +40,7 @@ public class OrderController {
         try {
             // id应由前端传入后可进行替换
             //   result = orderService.OrderDetailById(id);
-            result = orderService.OrderDetailById(2L);
+            result = orderService.orderDetailById(2L);
         } catch (Exception e) {
             log.error("sendGoodsController e:{},id:{}", e, id);
             return "查询异常 请查看日志";
@@ -54,7 +55,7 @@ public class OrderController {
         try {
             // id应由前端传入后可进行替换
             //   result = orderService.OrderDetailById(id);
-            result = orderService.OrderDetailById(3L);
+            result = orderService.orderDetailById(3L);
         } catch (Exception e) {
             log.error("receiveGoodsController e:{},id:{}", e, id);
             return "查询异常 请查看日志";
